@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent"
+    tools:context="website.dango.resistor.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <CheckBox
+        android:id="@+id/selectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="selectAll"
+        />
+
+    <TextView
+        android:id="@+id/selectAllText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/markable_text"
+        android:text="@string/select_all"
+        app:layout_constraintTop_toTopOf="@id/selectAll"
+        app:layout_constraintBottom_toBottomOf="@id/selectAll"
+        app:layout_constraintLeft_toRightOf="@id/selectAll"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="selectAll"
+        />
+
+    <TextView
+        android:id="@+id/headerAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/markable_text"
+        android:text="@string/amount"
+        app:layout_constraintTop_toTopOf="@id/selectAll"
+        app:layout_constraintBottom_toBottomOf="@id/selectAll"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        />
+
+    <TextView
+        android:id="@+id/help_short"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/markable_text"
+        app:layout_constraintTop_toBottomOf="@id/selectAll"
+        android:textAlignment="center"
+        android:text="@string/help_short"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:overScrollMode="ifContentScrolls"
+        app:layout_constraintTop_toBottomOf="@id/selectAll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/recyclerview_item" />
+
+
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_addButtonColorNormal="@android:color/white"
+        app:fab_addButtonColorPressed="@android:color/white"
+        app:fab_addButtonPlusIconColor="@android:color/primary_text_light"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/new_calc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_arrow_forward_black_24dp"
+            app:fab_colorNormal="@android:color/white"
+            app:fab_colorPressed="@color/fabButtonPressed"
+            app:fab_title="@string/new_calculation"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/new_resistor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_add_black_24dp"
+            app:fab_colorNormal="@android:color/white"
+            app:fab_colorPressed="@color/fabButtonPressed"
+            app:fab_title="@string/new_resistor"
+            />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

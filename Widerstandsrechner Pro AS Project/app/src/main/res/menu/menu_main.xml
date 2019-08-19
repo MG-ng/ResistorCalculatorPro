@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="website.dango.resistor.website.example.myapplication.MainActivity">
+
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/ic_help_outline_black_24dp"
+        android:title="@string/help"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_info_outline_black_24dp"
+        />
+
+</menu>

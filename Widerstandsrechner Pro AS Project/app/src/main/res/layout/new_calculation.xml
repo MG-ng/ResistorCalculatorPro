@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/fab_margin"
+        >
+
+        <TextView
+            android:id="@+id/numberOfAvilableResistors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/fab_margin"
+            android:text="@string/circuit_realized_N_res"
+            />
+
+        <TextView
+            android:id="@+id/selectMaxUsedInNextCircuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/numberOfAvilableResistors"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/select_amount_of_used_resistors"
+            android:layout_margin="@dimen/fab_margin"
+            />
+
+        <Spinner
+            android:id="@+id/numberMaxUsedInNextCircuit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/selectMaxUsedInNextCircuit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/fab_margin"
+            />
+
+        <TextView
+            android:id="@+id/reachResistorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wanted_total_resistor"
+            app:layout_constraintTop_toBottomOf="@id/numberMaxUsedInNextCircuit"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="@dimen/fab_margin"
+            />
+
+        <EditText
+            android:id="@+id/totalResistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/reachResistorText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:inputType="phone"
+            android:digits=".0123456789"
+            app:layout_constraintWidth_percent="50"
+            android:layout_margin="@dimen/fab_margin"
+            android:gravity="center"
+            android:hint="@string/resistance"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Resistor Calculator Pro</string>
+
+    <string name="hint_word">Resistance&#8230;</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Resistor not saved because it is empty.</string>
+
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="help_short">Click the plus to add a resistor</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="select_all">Select all</string>
+    <string name="amount">Amount</string>
+    <string name="new_calculation">New Calculation</string>
+    <string name="new_resistor">New Resistor</string>
+    <string name="resistor">Resistor</string>
+    <string name="resistance">Resistance</string>
+
+    <string name="circuit_realized_N_res">The circuit is realized with your selected %1$d resistors.</string>
+    <string name="really_delete">Do you really want to delete the resistor?</string>
+    <string name="select_amount_of_used_resistors">Choose the maximum number of resistors to use</string>
+    <string name="wanted_total_resistor">The total resistance you want to achieve</string>
+    <string name="min_2_resistors">Choose at least 2 resistors!</string>
+    <string name="find_best_combination">Calculate the best circuit</string>
+
+    <string name="something_invalid">Something was invalid</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="blue">Blue</string>
+
+    <string name="choose_max_amount">Choose the maximum number</string>
+
+
+
+
+    <string name="you_wanted_an_resistor_with">"You wanted a total resistance of %1$s Ω and this should be composed of maximum %2$d resistors. "</string>
+    <string name="deviation">"Deviation: "</string>
+
+
+
+    <string name="copyright" translatable="false">Copyright by DANGO Web</string>
+
+    <string name="note">More resistances both in the selection and in the desired maximum composition lengthen the calculations. </string>
+    <string name="idea">The idea of the app came from the BwInf. Now the tool is available to the general public :)</string>
+    <string name="help_text_long">1. Add your own resistors with the + symbol.  \n\n
+        2. Use the arrow to get the best circuit for a specific total resistor with your existing resistors.  \n\n
+        3. Hold a list item for more options.  </string>
+
+
+    <string name="these_are_the_resistors">This is best achieved with these resistors:\n\n</string>
+    <string name="result">result: </string>
+    <string name="this_is_how_you_do_it">This is how you do it:</string>
+
+
+    <string name="color_black">Black</string>
+    <string name="color_brown">Brown</string>
+    <string name="color_red">Red</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_grey">(Dark-)Grey</string>
+    <string name="color_white">White</string>
+
+    <string name="color_gold">Gold</string>
+    <string name="color_silver">Silver</string>
+    <string name="choose_color">Choose color</string>
+    <string name="edit_resistor_title">Edit Resistor</string>
+    <string name="edit_resistor_amount">Edit resistor amount</string>
+    <string name="okay">Okay</string>
+    <string name="wait">Please wait…</string>
+
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/new_resistor_layout"
+    >
+
+    <TextView
+        android:id="@+id/blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/codeSwitcher"
+        app:layout_constraintBottom_toBottomOf="@id/codeSwitcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/blue"
+        style="@style/markable_text"
+        />
+
+    <Switch
+        android:id="@+id/codeSwitcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        />
+
+    <TextView
+        android:id="@+id/beige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/codeSwitcher"
+        app:layout_constraintBottom_toBottomOf="@id/codeSwitcher"
+        app:layout_constraintLeft_toRightOf="@id/codeSwitcher"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="Beige"
+        style="@style/markable_text"
+        />
+
+    <TextView
+        android:id="@+id/resultOfPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/codeSwitcher"
+        app:layout_constraintBottom_toBottomOf="@id/codeSwitcher"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Ω"
+        android:layout_margin="@dimen/fab_margin"
+        />
+
+
+    <include
+        android:id="@+id/colorPickerBlue"
+        layout="@layout/color_picker_blue" />
+
+    <include
+        android:id="@+id/colorPickerBeige"
+        layout="@layout/color_picker_beige"
+        android:visibility="gone"
+        />
+
+
+    <EditText
+        android:id="@+id/edit_resistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_word"
+        android:inputType="phone"
+        android:digits="0123456789."
+        android:padding="@dimen/small_padding"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/edit_amount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/big_padding"
+        android:layout_marginTop="@dimen/big_padding"
+        android:textSize="18sp"
+        android:nextFocusForward="@id/edit_amount"
+        android:nextFocusRight="@id/edit_amount"
+        />
+
+    <EditText
+        android:id="@+id/edit_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/amount"
+        android:inputType="phone"
+        android:digits="0123456789"
+        android:imeOptions="actionSend"
+        android:padding="@dimen/small_padding"
+        app:layout_constraintTop_toTopOf="@id/edit_resistance"
+        app:layout_constraintBottom_toBottomOf="@id/edit_resistance"
+        app:layout_constraintLeft_toRightOf="@id/edit_resistance"
+        app:layout_constraintRight_toLeftOf="@id/button_save"
+        android:layout_margin="@dimen/fab_margin"
+        android:textSize="18sp"
+        android:nextFocusForward="@id/button_save"
+        />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/button_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_margin="@dimen/fab_margin"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

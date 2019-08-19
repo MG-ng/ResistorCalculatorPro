@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="website.dango.resistor.AboutActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/barLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/idea"
+        style="@style/markable_text"
+        />
+
+    <TextView
+        android:id="@+id/tvCopright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:layout_margin="@dimen/fab_margin"
+        android:text="@string/copyright"
+        style="@style/markable_text"
+        />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fab_labelStyle="@style/menu_labels_style"
+        app:fab_addButtonColorNormal="@color/white"
+        app:fab_addButtonColorPressed="@color/fabButtonPressed"
+        app:fab_addButtonPlusIconColor="@color/colorPrimaryDark"
+        >
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/visitWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_open_in_browser_white_24dp"
+            app:fab_addButtonColorNormal="@color/white"
+            app:fab_addButtonColorPressed="@color/fabButtonPressed"
+            app:fab_addButtonPlusIconColor="@color/colorPrimaryDark"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/visitCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_code_white_24dp"
+            app:fab_addButtonColorNormal="@color/white"
+            app:fab_addButtonColorPressed="@color/fabButtonPressed"
+            app:fab_addButtonPlusIconColor="@color/colorPrimaryDark"
+            />
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

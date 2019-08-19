@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#59B3E4</color>
+    <color name="colorPrimaryDark">#418BB1</color>
+    <color name="colorAccent">#FFBD7F</color>
+
+
+    <color name="fabButtonPressed">#EBEBEB</color>
+    <color name="black_semi_transparent">#28333D</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <!-- colorpicker -->
+
+    <color name="black">#000000</color>
+    <color name="brown">#997551</color>
+    <color name="red">#ff393a</color>
+    <color name="orange">#ffa64a</color>
+    <color name="yellow">#ffff79</color>
+    <color name="green">#89fe89</color>
+    <color name="blue">#4888f2</color>
+    <color name="pink">#f08ff6</color>
+    <color name="grey">#808080</color>
+    <color name="white">#ffffff</color>
+    <color name="gold">#cd9933</color>
+    <color name="silver">#cccccc</color>
+
+
+</resources>
